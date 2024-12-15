@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #0a0e15;
+  font-size: 95%;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  background-color: #e0e4eb;
+  color: #212631;
+}
+
+textarea {
+  height: 8rem;
+}
+
+i {
+  color: #212631;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* header-bar */
+header {
+  width: 100%;
+
+  transition: background-color 0.3s ease;
+  padding: 1rem;
+}
+
+/* header-bar */
+
+main {
+  margin-block: 1rem 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin-inline: 10%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* form new notes */
+
+#formNewNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 2rem 2rem;
+  background-color: #0a0e15;
+  border-radius: 16px;
+  border: 1px solid #212631;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+#noteForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#title,
+#description {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.validation-message {
+  color: rgb(192, 0, 0);
+  margin-block: 0.5rem;
+}
+
+input:user-invalid,
+textarea:user-invalid {
+  border: 1px solid red;
+}
+
+#notesSubmit {
+  align-self: flex-end;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #212631;
+  font-size: 1rem;
+  color: #ffffff;
+}
+#notesSubmit:hover {
+  background-color: #373f4e;
+}
+#notesSubmit:active {
+  background-color: #f0f1f5;
+}
+
+/* form new notes */
+
+/* notes container */
+.judul-notes-container {
+  grid-area: judul;
+  display: flex;
+  justify-content: center;
+}
+#allNotesBtn {
+  grid-area: allNotes;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #212631;
+  color: #ffffff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+#allNotesBtn:hover {
+  background-color: #373f4e;
+}
+#allNotesBtn:active {
+  background-color: #4e576a;
+}
+#allNotesBtn.active {
+  opacity: 1;
+}
+
+#archivedListBtn {
+  grid-area: archivedList;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #212631;
+  color: #ffffff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+#archivedListBtn:hover {
+  background-color: #373f4e;
+}
+#archivedListBtn:active {
+  background-color: #4e576a;
+}
+#archivedListBtn.active {
+  opacity: 1;
+}
+
+#searchForm {
+  grid-area: searchForm;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: end;
+}
+notes-list {
+  grid-area: notesList;
+}
+
+#searchInput {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  flex: 1;
+  background-color: transparent;
+  color: #f0f1f5;
+  border: 1px solid #f0f1f5;
+}
+
+#searchSubmit {
+  padding: 0.5rem 0.8rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#searchSubmit:hover {
+  background-color: #212631;
+
+  i {
+    color: #ffffff;
+  }
+}
+
+#searchSubmit:active {
+  background-color: #4e576a;
+}
+
+#notesContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "judul judul judul judul judul judul"
+    "allNotes archivedList . searchForm searchForm searchForm"
+    "notesList notesList notesList notesList notesList notesList";
+}
+
+/* notes container */
+
+/* footer-bar */
+footer {
+  width: 100%;
+  transition: background-color 0.3s ease;
+  background-color: #212631;
+}
+
+/* footer-bar */
+
+/* media query */
+
+@media screen and (max-width: 600px) {
+  #notesContainer {
+    grid-template-areas:
+      "judul judul"
+      "searchForm searchForm"
+      "allNotes archivedList"
+      "notesList notesList";
+  }
+}
