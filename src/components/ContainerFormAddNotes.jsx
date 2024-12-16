@@ -1,12 +1,12 @@
 import React from 'react';
 import FormAddNotes from './FormAddNotes';
 
-function ContainerFormAddNotes() {
+function ContainerFormAddNotes({ addNotes }) {
   return (
     <>
       <section id="formNewNotes">
         <h2>New Notes</h2>
-        <FormAddNotes />
+        <FormAddNotes addNotes={addNotes} />
       </section>
     </>
   );
