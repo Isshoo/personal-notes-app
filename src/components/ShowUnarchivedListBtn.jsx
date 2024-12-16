@@ -3,7 +3,7 @@ import React from 'react';
 function ShowUnarchivedListBtn() {
   return (
     <>
-      <button id="allNotesBtn" class="active">
+      <button id="allNotesBtn" className="active">
         Unarchived
       </button>
     </>

@@ -6,7 +6,7 @@ function SearchNotesForm() {
       <form id="searchForm">
         <input type="text" id="searchInput" placeholder="Cari Notes" />
         <button type="submit" id="searchSubmit">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
     </>

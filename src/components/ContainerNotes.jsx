@@ -8,7 +8,7 @@ function ContainerNotes() {
   return (
     <>
       <section id="notesContainer">
-        <div class="judul-notes-container">
+        <div className="judul-notes-container">
           <h2>My Notes</h2>
         </div>
         <ShowUnarchivedListBtn />

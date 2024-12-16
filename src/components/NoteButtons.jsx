@@ -6,7 +6,7 @@ import DeleteBtn from './DeleteBtn';
 function NoteButtons() {
   return (
     <>
-      <div class="buttons">
+      <div className="buttons">
         <ArchiveBtn />
         <UnarchiveBtn />
         <DeleteBtn />
