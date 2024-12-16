@@ -1,0 +1,10 @@
+:host {
+  background-color: #212631;
+  border-radius: 3rem;
+  margin-inline: 8%;
+  color: #f0f1f5;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
