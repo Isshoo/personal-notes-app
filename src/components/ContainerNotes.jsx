@@ -4,7 +4,7 @@ import ShowArchivedListBtn from './ShowArchivedListBtn';
 import SearchNotesForm from './SearchNotesForm';
 import NotesList from './NotesList';
 
-function ContainerNotes({ notes }) {
+function ContainerNotes({ notes, onDelete }) {
   return (
     <>
       <section id="notesContainer">
@@ -14,7 +14,7 @@ function ContainerNotes({ notes }) {
         <ShowUnarchivedListBtn />
         <ShowArchivedListBtn />
         <SearchNotesForm />
-        <NotesList notes={notes} />
+        <NotesList notes={notes} onDelete={onDelete} />
       </section>
     </>
   );

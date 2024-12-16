@@ -1,9 +1,9 @@
 import React from 'react';
 
-function DeleteBtn() {
+function DeleteBtn({ id, onDelete }) {
   return (
     <>
-      <button className="btn-delete">
+      <button className="btn-delete" onClick={() => onDelete(id)}>
         <i className="fa-solid fa-trash-alt"></i>
       </button>
     </>

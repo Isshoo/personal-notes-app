@@ -3,13 +3,13 @@ import ArchiveBtn from './ArchiveBtn';
 import UnarchiveBtn from './UnarchiveBtn';
 import DeleteBtn from './DeleteBtn';
 
-function NoteButtons() {
+function NoteButtons({ id, onDelete }) {
   return (
     <>
       <div className="buttons">
         <ArchiveBtn />
         <UnarchiveBtn />
-        <DeleteBtn />
+        <DeleteBtn id={id} onDelete={onDelete} />
       </div>
     </>
   );

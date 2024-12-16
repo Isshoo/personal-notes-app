@@ -11,6 +11,7 @@ class NotesApp extends React.Component {
     };
 
     this.onAddNotesHandler = this.onAddNotesHandler.bind(this);
+    this.onDeleteHandler = this.onDeleteHandler.bind(this);
   }
 
   onAddNotesHandler({ title, body }) {
@@ -29,12 +30,17 @@ class NotesApp extends React.Component {
       };
     });
   }
+
+  onDeleteHandler(id) {
+    const notes = this.state.notes.filter((note) => note.id !== id);
+    this.setState({ notes });
+  }
   render() {
     return (
       <>
         <main>
           <ContainerFormAddNotes addNotes={this.onAddNotesHandler} />
-          <ContainerNotes notes={this.state.notes} />
+          <ContainerNotes notes={this.state.notes} onDelete={this.onDeleteHandler} />
         </main>
       </>
     );
