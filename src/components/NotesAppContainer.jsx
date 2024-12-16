@@ -6,9 +6,11 @@ import Footer from './Footer';
 function NotesAppContainer() {
   return (
     <>
-      <Header />
-      <NotesApp />
-      <Footer />
+      <div className="container">
+        <Header />
+        <NotesApp />
+        <Footer />
+      </div>
     </>
   );
 }

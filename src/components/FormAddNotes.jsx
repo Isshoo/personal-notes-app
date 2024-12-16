@@ -3,31 +3,31 @@ import React from 'react';
 function FormAddNotes() {
   return (
     <>
-      <form id="noteForm" autocomplete="off">
+      <form id="noteForm" autoComplete="off">
         <div>
-          <label for="title">Title</label>
+          <label htmlFor="title">Title</label>
           <input
             type="text"
             id="title"
             name="title"
             required
             placeholder="Judul"
-            minlength="5"
+            minLength="5"
             aria-describedby="titleValidation"
           />
-          <p id="titleValidation" class="validation-message" aria-live="polite"></p>
+          <p id="titleValidation" className="validation-message" aria-live="polite"></p>
         </div>
         <div>
-          <label for="description">Description</label>
+          <label htmlFor="description">Description</label>
           <textarea
             id="description"
             name="description"
             required
             placeholder="Deskripsi"
-            minlength="10"
+            minLength="10"
             aria-describedby="descriptionValidation"
           ></textarea>
-          <p id="descriptionValidation" class="validation-message" aria-live="polite"></p>
+          <p id="descriptionValidation" className="validation-message" aria-live="polite"></p>
         </div>
         <button type="submit" id="notesSubmit">
           Tambahkan

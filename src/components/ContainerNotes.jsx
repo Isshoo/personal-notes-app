@@ -4,7 +4,7 @@ import ShowArchivedListBtn from './ShowArchivedListBtn';
 import SearchNotesForm from './SearchNotesForm';
 import NotesList from './NotesList';
 
-function ContainerNotes() {
+function ContainerNotes({ notes }) {
   return (
     <>
       <section id="notesContainer">
@@ -14,7 +14,7 @@ function ContainerNotes() {
         <ShowUnarchivedListBtn />
         <ShowArchivedListBtn />
         <SearchNotesForm />
-        <NotesList />
+        <NotesList notes={notes} />
       </section>
     </>
   );
