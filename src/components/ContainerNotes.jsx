@@ -7,6 +7,7 @@ import NotesList from './NotesList';
 function ContainerNotes({
   unarchivedNotes,
   archivedNotes,
+  searchQuery,
   onDelete,
   onArchiving,
   onUnarchiving,
@@ -23,6 +24,7 @@ function ContainerNotes({
       <ShowArchivedListBtn onShowArchivedList={onShowArchivedList} />
       <SearchNotesForm onSearchNotes={onSearchNotes} />
       <NotesList
+        searchQuery={searchQuery}
         unarchivedNotes={unarchivedNotes}
         archivedNotes={archivedNotes}
         onDelete={onDelete}

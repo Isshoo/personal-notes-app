@@ -9,6 +9,7 @@ class NotesApp extends React.Component {
     this.state = {
       unarchivedNotes: getInitialData(),
       archivedNotes: [],
+      searchQuery: '',
     };
 
     this.onAddNotesHandler = this.onAddNotesHandler.bind(this);
@@ -102,16 +103,8 @@ class NotesApp extends React.Component {
     archiveNoteBtn.forEach((btn) => (btn.style.display = 'block'));
   }
 
-  onSearchHandler({ query }) {
-    let filteredNotes = [];
-    if (query === '') {
-      filteredNotes = this.state.notes;
-    } else {
-      filteredNotes = this.state.notes.filter((note) =>
-        note.title.toLowerCase().includes(query.toLowerCase())
-      );
-    }
-    this.setState({ unarchivedNotes: filteredNotes });
+  onSearchHandler(query) {
+    this.setState({ searchQuery: query });
   }
   render() {
     return (
@@ -120,6 +113,7 @@ class NotesApp extends React.Component {
         <ContainerNotes
           unarchivedNotes={this.state.unarchivedNotes}
           archivedNotes={this.state.archivedNotes}
+          searchQuery={this.state.searchQuery}
           onDelete={this.onDeleteHandler}
           onArchiving={this.onArchivingHandler}
           onUnarchiving={this.onUnarchivingHandler}
