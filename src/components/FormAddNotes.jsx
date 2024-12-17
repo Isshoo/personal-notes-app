@@ -8,6 +8,7 @@ class FormAddNotes extends React.Component {
     this.state = {
       title: '',
       body: '',
+      titleMaxLength: 50,
     };
 
     this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this);
@@ -16,11 +17,16 @@ class FormAddNotes extends React.Component {
   }
 
   onTitleChangeEventHandler(event) {
-    this.setState(() => {
-      return {
-        title: event.target.value,
-      };
-    });
+    const maxLength = this.state.titleMaxLength;
+    const inputValue = event.target.value;
+
+    if (inputValue.length <= maxLength) {
+      this.setState(() => {
+        return {
+          title: inputValue,
+        };
+      });
+    }
   }
 
   onBodyChangeEventHandler(event) {
@@ -47,12 +53,13 @@ class FormAddNotes extends React.Component {
             name="title"
             required
             placeholder="Judul"
-            minLength="5"
             aria-describedby="titleValidation"
             value={this.state.title}
             onChange={this.onTitleChangeEventHandler}
           />
-          <p id="titleValidation" className="validation-message" aria-live="polite"></p>
+          <p id="titleValidation" className="validation-message" aria-live="polite">
+            Jumlah karakter tersisa: {this.state.titleMaxLength - this.state.title.length}
+          </p>
         </div>
         <div>
           <label htmlFor="description">Description</label>
@@ -61,7 +68,6 @@ class FormAddNotes extends React.Component {
             name="description"
             required
             placeholder="Deskripsi"
-            minLength="10"
             aria-describedby="descriptionValidation"
             value={this.state.body}
             onChange={this.onBodyChangeEventHandler}
