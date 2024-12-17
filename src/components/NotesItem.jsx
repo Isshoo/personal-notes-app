@@ -2,7 +2,7 @@ import React from 'react';
 import NoteButtons from './NoteButtons';
 import { showFormattedDate } from '../utils';
 
-function NotesItem({ id, title, body, createdAt, onDelete }) {
+function NotesItem({ id, title, body, createdAt, onDelete, onArchiving, onUnarchiving }) {
   return (
     <div className="note">
       <div className="notes-item">
@@ -15,7 +15,12 @@ function NotesItem({ id, title, body, createdAt, onDelete }) {
         <div className="note-des">
           <p>{body}</p>
         </div>
-        <NoteButtons id={id} onDelete={onDelete} />
+        <NoteButtons
+          id={id}
+          onDelete={onDelete}
+          onArchiving={onArchiving}
+          onUnarchiving={onUnarchiving}
+        />
       </div>
     </div>
   );

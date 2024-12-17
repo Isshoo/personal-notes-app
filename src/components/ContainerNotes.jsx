@@ -6,8 +6,10 @@ import NotesList from './NotesList';
 
 function ContainerNotes({
   unarchivedNotes,
-  archivedNotes, // Default to unarchived notes if no archived notes provided
+  archivedNotes,
   onDelete,
+  onArchiving,
+  onUnarchiving,
   onShowArchivedList,
   onShowUnarchivedList,
   onSearchNotes,
@@ -25,6 +27,8 @@ function ContainerNotes({
           unarchivedNotes={unarchivedNotes}
           archivedNotes={archivedNotes}
           onDelete={onDelete}
+          onArchiving={onArchiving}
+          onUnarchiving={onUnarchiving}
         />
       </section>
     </>
