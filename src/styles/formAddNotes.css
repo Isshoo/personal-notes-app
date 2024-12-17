@@ -31,9 +31,9 @@
   margin-block: 0.5rem;
 }
 
-input:user-invalid,
-textarea:user-invalid {
-  border: 1px solid red;
+input:focus,
+textarea:focus {
+  border: 1px solid #93a7ff;
 }
 
 #notesSubmit {

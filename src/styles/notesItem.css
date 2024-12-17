@@ -63,12 +63,51 @@
 .btn-archive,
 .btn-unarchive,
 .btn-delete {
+  position: relative;
   background-color: transparent;
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 100%;
   transition: 0.3s ease;
   border: none;
+}
+.btn-archive::after,
+.btn-unarchive::after,
+.btn-delete::after {
+  content: attr(data-message); /* Ambil pesan dari atribut data-message */
+  position: absolute;
+  top: -0.75rem; /* Penempatan di atas tombol */
+  left: -0.5rem;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.5rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-archive:hover::after,
+.btn-unarchive:hover::after,
+.btn-delete:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-0.5rem);
+}
+
+.btn-archive::after {
+  content: "Arsipkan Catatan";
+}
+
+.btn-unarchive::after {
+  content: "Batalkan Arsip";
+}
+
+.btn-delete::after {
+  content: "Hapus Catatan";
 }
 
 .btn-archive i,
