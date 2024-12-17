@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ShowUnarchivedListBtn() {
+function ShowUnarchivedListBtn({ onShowUnarchivedList }) {
   return (
     <>
-      <button id="allNotesBtn" className="active">
+      <button id="allNotesBtn" className="active" onClick={() => onShowUnarchivedList()}>
         Unarchived
       </button>
     </>

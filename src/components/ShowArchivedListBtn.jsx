@@ -1,9 +1,11 @@
 import React from 'react';
 
-function ShowArchivedListBtn() {
+function ShowArchivedListBtn({ onShowArchivedList }) {
   return (
     <>
-      <button id="archivedListBtn">Archived</button>
+      <button id="archivedListBtn" onClick={() => onShowArchivedList()}>
+        Archived
+      </button>
     </>
   );
 }
