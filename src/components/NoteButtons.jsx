@@ -5,13 +5,11 @@ import DeleteBtn from './DeleteBtn';
 
 function NoteButtons({ id, onDelete, onArchiving, onUnarchiving }) {
   return (
-    <>
-      <div className="buttons">
-        <ArchiveBtn id={id} onArchiving={onArchiving} />
-        <UnarchiveBtn id={id} onUnarchiving={onUnarchiving} />
-        <DeleteBtn id={id} onDelete={onDelete} />
-      </div>
-    </>
+    <div className="buttons">
+      <ArchiveBtn id={id} onArchiving={onArchiving} />
+      <UnarchiveBtn id={id} onUnarchiving={onUnarchiving} />
+      <DeleteBtn id={id} onDelete={onDelete} />
+    </div>
   );
 }
 

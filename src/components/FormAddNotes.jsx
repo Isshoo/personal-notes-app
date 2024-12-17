@@ -38,42 +38,40 @@ class FormAddNotes extends React.Component {
 
   render() {
     return (
-      <>
-        <form id="noteForm" autoComplete="off" onSubmit={this.onSubmitEventHandler}>
-          <div>
-            <label htmlFor="title">Title</label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              required
-              placeholder="Judul"
-              minLength="5"
-              aria-describedby="titleValidation"
-              value={this.state.title}
-              onChange={this.onTitleChangeEventHandler}
-            />
-            <p id="titleValidation" className="validation-message" aria-live="polite"></p>
-          </div>
-          <div>
-            <label htmlFor="description">Description</label>
-            <textarea
-              id="description"
-              name="description"
-              required
-              placeholder="Deskripsi"
-              minLength="10"
-              aria-describedby="descriptionValidation"
-              value={this.state.body}
-              onChange={this.onBodyChangeEventHandler}
-            ></textarea>
-            <p id="descriptionValidation" className="validation-message" aria-live="polite"></p>
-          </div>
-          <button type="submit" id="notesSubmit">
-            Tambahkan
-          </button>
-        </form>
-      </>
+      <form id="noteForm" autoComplete="off" onSubmit={this.onSubmitEventHandler}>
+        <div>
+          <label htmlFor="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+            placeholder="Judul"
+            minLength="5"
+            aria-describedby="titleValidation"
+            value={this.state.title}
+            onChange={this.onTitleChangeEventHandler}
+          />
+          <p id="titleValidation" className="validation-message" aria-live="polite"></p>
+        </div>
+        <div>
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            required
+            placeholder="Deskripsi"
+            minLength="10"
+            aria-describedby="descriptionValidation"
+            value={this.state.body}
+            onChange={this.onBodyChangeEventHandler}
+          ></textarea>
+          <p id="descriptionValidation" className="validation-message" aria-live="polite"></p>
+        </div>
+        <button type="submit" id="notesSubmit">
+          Tambahkan
+        </button>
+      </form>
     );
   }
 }

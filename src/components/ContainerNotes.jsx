@@ -15,23 +15,21 @@ function ContainerNotes({
   onSearchNotes,
 }) {
   return (
-    <>
-      <section id="notesContainer">
-        <div className="judul-notes-container">
-          <h2>My Notes</h2>
-        </div>
-        <ShowUnarchivedListBtn onShowUnarchivedList={onShowUnarchivedList} />
-        <ShowArchivedListBtn onShowArchivedList={onShowArchivedList} />
-        <SearchNotesForm onSearchNotes={onSearchNotes} />
-        <NotesList
-          unarchivedNotes={unarchivedNotes}
-          archivedNotes={archivedNotes}
-          onDelete={onDelete}
-          onArchiving={onArchiving}
-          onUnarchiving={onUnarchiving}
-        />
-      </section>
-    </>
+    <section id="notesContainer">
+      <div className="judul-notes-container">
+        <h2>My Notes</h2>
+      </div>
+      <ShowUnarchivedListBtn onShowUnarchivedList={onShowUnarchivedList} />
+      <ShowArchivedListBtn onShowArchivedList={onShowArchivedList} />
+      <SearchNotesForm onSearchNotes={onSearchNotes} />
+      <NotesList
+        unarchivedNotes={unarchivedNotes}
+        archivedNotes={archivedNotes}
+        onDelete={onDelete}
+        onArchiving={onArchiving}
+        onUnarchiving={onUnarchiving}
+      />
+    </section>
   );
 }
 

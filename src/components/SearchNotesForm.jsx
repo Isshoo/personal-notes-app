@@ -2,14 +2,12 @@ import React from 'react';
 
 function SearchNotesForm() {
   return (
-    <>
-      <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Cari Notes" />
-        <button type="submit" id="searchSubmit">
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-    </>
+    <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Cari Notes" />
+      <button type="submit" id="searchSubmit">
+        <i className="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
   );
 }
 

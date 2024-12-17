@@ -115,21 +115,19 @@ class NotesApp extends React.Component {
   }
   render() {
     return (
-      <>
-        <main>
-          <ContainerFormAddNotes addNotes={this.onAddNotesHandler} />
-          <ContainerNotes
-            unarchivedNotes={this.state.unarchivedNotes}
-            archivedNotes={this.state.archivedNotes}
-            onDelete={this.onDeleteHandler}
-            onArchiving={this.onArchivingHandler}
-            onUnarchiving={this.onUnarchivingHandler}
-            onShowArchivedList={this.onShowArchiveHandler}
-            onShowUnarchivedList={this.onShowUnarchiveHandler}
-            onSearchNotes={this.onSearchHandler}
-          />
-        </main>
-      </>
+      <main>
+        <ContainerFormAddNotes addNotes={this.onAddNotesHandler} />
+        <ContainerNotes
+          unarchivedNotes={this.state.unarchivedNotes}
+          archivedNotes={this.state.archivedNotes}
+          onDelete={this.onDeleteHandler}
+          onArchiving={this.onArchivingHandler}
+          onUnarchiving={this.onUnarchivingHandler}
+          onShowArchivedList={this.onShowArchiveHandler}
+          onShowUnarchivedList={this.onShowUnarchiveHandler}
+          onSearchNotes={this.onSearchHandler}
+        />
+      </main>
     );
   }
 }

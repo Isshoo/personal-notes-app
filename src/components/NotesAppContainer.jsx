@@ -5,13 +5,11 @@ import Footer from './Footer';
 
 function NotesAppContainer() {
   return (
-    <>
-      <div className="container">
-        <Header />
-        <NotesApp />
-        <Footer />
-      </div>
-    </>
+    <div className="container">
+      <Header />
+      <NotesApp />
+      <Footer />
+    </div>
   );
 }
 
