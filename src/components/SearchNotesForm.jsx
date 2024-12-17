@@ -3,7 +3,6 @@ import React from 'react';
 class SearchNotesForm extends React.Component {
   constructor(props) {
     super(props);
-    // inisialisasi state
     this.state = {
       searchQuery: '',
     };
